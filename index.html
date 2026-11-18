@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URA TIN Registration Portal</title>
+
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <img src="ura-logo.png" alt="URA Logo">
+
+        <h1>TIN Registration Portal</h1>
+
+    </header>
+
+    <!-- INFORMATION BAR -->
+    <div class="info-bar">
+
+        Have your National ID ready before starting.
+
+    </div>
+
+    <!-- FORM CONTAINER -->
+    <main class="form-container">
+
+        <form>
+
+            <!-- TAXPAYER TYPE OPTIONS -->
+            <div class="taxpayer-options">
+
+                <input type="radio" id="individual"
+                       name="taxpayerType" value="individual" checked>
+
+                <label for="individual">
+                    Individual Taxpayer
+                </label>
+
+                <input type="radio" id="business"
+                       name="taxpayerType" value="business">
+
+                <label for="business">
+                    Business Entity
+                </label>
+
+            </div>
+
+            <!-- SECTION A -->
+            <fieldset>
+
+                <legend>Section A: Individual Taxpayer Details</legend>
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="fullName">Full Name:</label>
+
+                    <input type="text" id="fullName"
+                           name="fullName" required>
+
+                </div>
+
+                <!-- NIN -->
+                <div class="form-group">
+
+                    <label for="nin">National Identification Number (NIN):</label>
+
+                    <input type="text" id="nin"
+                           name="nin"
+                           pattern="[A-Z]{2}[A-Z0-9]{12}"
+                           maxlength="14"
+                           title="Enter two capital letters followed by twelve letters or digits."
+                           required>
+
+                </div>
+
+                <!-- DATE OF BIRTH -->
+                <div class="form-group">
+
+                    <label for="dob">Date of Birth:</label>
+
+                    <input type="date" id="dob" name="dob">
+
+                </div>
+
+                <!-- GENDER -->
+                <div class="form-group">
+
+                    <label>Gender:</label>
+
+                    <div class="gender-options">
+
+                        <input type="radio" id="male"
+                               name="gender" value="Male">
+
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female"
+                               name="gender" value="Female">
+
+                        <label for="female">Female</label>
+
+                    </div>
+
+                </div>
+
+                <!-- DISTRICT -->
+                <div class="form-group">
+
+                    <label for="district">District:</label>
+
+                    <select id="district" name="district">
+
+                        <option value="">Select District</option>
+
+                        <option value="Kampala">Kampala</option>
+
+                        <option value="Wakiso">Wakiso</option>
+
+                        <option value="Mukono">Mukono</option>
+
+                        <option value="Jinja">Jinja</option>
+
+                        <option value="Mbarara">Mbarara</option>
+
+                    </select>
+
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="phone">Phone Number:</label>
+
+                    <input type="tel" id="phone"
+                           name="phone" required>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">Email Address:</label>
+
+                    <input type="email" id="email"
+                           name="email">
+
+                </div>
+
+                <!-- NATIONAL ID UPLOAD -->
+                <div class="form-group">
+
+                    <label for="nationalID">Upload National ID:</label>
+
+                    <input type="file" id="nationalID"
+                           name="nationalID"
+                           accept=".jpg,.pdf">
+
+                </div>
+
+            </fieldset>
+
+            <!-- NEXT BUTTON -->
+            <div class="button-container">
+
+                <button type="submit">Next</button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
